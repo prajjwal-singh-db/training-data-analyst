@@ -51,7 +51,7 @@ public class Task {
 
         // Create the Pipeline object with the options we defined above
         Pipeline pipeline = Pipeline.create(options);
-        PCollection<String> input = pipeline.apply(TextIO.read().from("gs://apache-beam-samples/nyc_taxi/misc/sample1000.csv"));
+        PCollection<String> input = pipeline.apply(TextIO.read().from("gs://pv-dataflow/data.csv"));
 
         PCollection<Double> rideTolalAmounts = input.apply(ParDo.of(new ExtractTaxiRideCostFn()));
         final PTransform<PCollection<Double>, PCollection<Iterable<Double>>> sample = Sample.fixedSizeGlobally(10);
