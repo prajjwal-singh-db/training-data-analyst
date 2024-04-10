@@ -40,9 +40,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class Task {
+public class Grep {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Task.class);
+    private static final Logger LOG = LoggerFactory.getLogger(Grep.class);
 
 
     public static void main(String[] args) {
